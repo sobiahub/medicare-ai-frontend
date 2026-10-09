@@ -11,180 +11,180 @@ export interface Department {
 
 export const DEPARTMENTS: Department[] = [
 
-  {
-    id: 1,
-    name: 'Cardiology',
-    description:
-      'Specialized cardiovascular care focused on heart health, prevention, assessment, and ongoing treatment.',
+{
+id: 1,
+name: 'General Medicine',
+description:
+'Primary healthcare for routine checkups, preventive care, common conditions, and general consultations.',
 
-    image: '/assets/images/departments/cardiology.jpg',
 
-    icon: 'bi bi-heart-pulse',
+image: 'assets/images/departments/general-medicine.jpg',
 
-    doctors: 8,
+icon: 'bi bi-heart-pulse-fill',
 
-    services: [
-      'Cardiac Consultation',
-      'Heart Health Assessment',
-      'Preventive Cardiac Care',
-      'Patient Monitoring'
-    ],
+doctors: 12,
 
-    available: true
-  },
+services: [
+  'Routine Checkups',
+  'General Consultation',
+  'Preventive Healthcare',
+  'Common Illness Management'
+],
 
-  {
-    id: 2,
-    name: 'Neurology',
-    description:
-      'Comprehensive neurological consultation and care for conditions affecting the nervous system.',
+available: true
 
-    image: '/assets/images/departments/neurology.jpg',
 
-    icon: 'bi bi-activity',
+},
 
-    doctors: 6,
+{
+id: 2,
+name: 'Cardiology',
+description:
+'Specialized cardiovascular care focused on heart health, prevention, assessment, and ongoing treatment.',
 
-    services: [
-      'Neurological Consultation',
-      'Condition Assessment',
-      'Treatment Planning',
-      'Follow-up Care'
-    ],
 
-    available: true
-  },
+image: 'assets/images/departments/cardiology.jpg',
 
-  {
-    id: 3,
-    name: 'Dermatology',
-    description:
-      'Professional healthcare services for skin, hair, and common dermatological concerns.',
+icon: 'bi bi-heart-pulse',
 
-    image: '/assets/images/departments/dermatology.jpg',
+doctors: 8,
 
-    icon: 'bi bi-person-hearts',
+services: [
+  'Cardiac Consultation',
+  'Heart Health Assessment',
+  'Preventive Cardiac Care',
+  'Patient Monitoring'
+],
 
-    doctors: 7,
+available: true
 
-    services: [
-      'Skin Consultation',
-      'Hair & Scalp Care',
-      'Skin Assessment',
-      'Personalized Care'
-    ],
 
-    available: true
-  },
+},
 
-  {
-    id: 4,
-    name: 'Pediatrics',
-    description:
-      'Dedicated healthcare services supporting children through routine care, prevention, and treatment.',
+{
+id: 3,
+name: 'Orthopedics',
+description:
+'Specialized care for bones, joints, muscles, mobility, and musculoskeletal concerns.',
 
-    image: '/assets/images/departments/pediatrics.jpg',
 
-    icon: 'bi bi-emoji-smile',
+image: 'assets/images/departments/orthopedics.jpg',
 
-    doctors: 9,
+icon: 'bi bi-bandaid',
 
-    services: [
-      'Child Checkups',
-      'Pediatric Consultation',
-      'Growth Monitoring',
-      'Preventive Care'
-    ],
+doctors: 6,
 
-    available: true
-  },
+services: [
+  'Orthopedic Consultation',
+  'Musculoskeletal Assessment',
+  'Mobility Support',
+  'Recovery Planning'
+],
 
-  {
-    id: 5,
-    name: 'Women Healthcare',
-    description:
-      'Comprehensive healthcare support designed around women’s health and wellbeing.',
+available: true
 
-    image: '/assets/images/departments/womens-healthcare.jpg',
 
-    icon: 'bi bi-gender-female',
+},
 
-    doctors: 8,
+{
+id: 4,
+name: 'Pediatrics',
+description:
+'Dedicated healthcare services supporting children through routine care, prevention, and treatment.',
 
-    services: [
-      'Women Health Consultation',
-      'Preventive Care',
-      'Routine Assessments',
-      'Specialist Support'
-    ],
 
-    available: true
-  },
+image: 'assets/images/departments/pediatrics.jpg',
 
-  {
-    id: 6,
-    name: 'Orthopedics',
-    description:
-      'Specialized care for bones, joints, muscles, mobility, and musculoskeletal concerns.',
+icon: 'bi bi-emoji-smile',
 
-    image: '/assets/images/departments/orthopedics.jpg',
+doctors: 9,
 
-    icon: 'bi bi-bandaid',
+services: [
+  'Child Checkups',
+  'Pediatric Consultation',
+  'Growth Monitoring',
+  'Preventive Care'
+],
 
-    doctors: 6,
+available: true
 
-    services: [
-      'Orthopedic Consultation',
-      'Musculoskeletal Assessment',
-      'Mobility Support',
-      'Recovery Planning'
-    ],
 
-    available: true
-  },
+},
 
-  {
-    id: 7,
-    name: 'General Medicine',
-    description:
-      'Primary healthcare for routine checkups, preventive care, common conditions, and general consultations.',
 
-    image: '/assets/images/departments/general-medicine.jpg',
+{
+id: 5,
+name: 'Neurology',
+description:
+'Comprehensive neurological consultation and care for conditions affecting the brain, spinal cord, and nervous system.',
 
-    icon: 'bi bi-heart-pulse-fill',
 
-    doctors: 12,
+image: 'assets/images/departments/neurology.jpg',
 
-    services: [
-      'Routine Checkups',
-      'General Consultation',
-      'Preventive Healthcare',
-      'Common Illness Management'
-    ],
+icon: 'bi bi-activity',
 
-    available: true
-  },
+doctors: 6,
 
-  {
-    id: 8,
-    name: 'Diagnostics',
-    description:
-      'Diagnostic support and testing services that help healthcare professionals make informed decisions.',
+services: [
+  'Neurological Consultation',
+  'Condition Assessment',
+  'Treatment Planning',
+  'Follow-up Care'
+],
 
-    image: '/assets/images/departments/diagnostics.jpg',
+available: true
 
-    icon: 'bi bi-clipboard2-pulse',
 
-    doctors: 5,
+},
 
-    services: [
-      'Diagnostic Testing',
-      'Medical Assessment',
-      'Digital Test Information',
-      'Healthcare Reporting'
-    ],
+{
+id: 6,
+name: 'Dermatology',
+description:
+'Professional healthcare services for skin, hair, nails, and common dermatological concerns.',
 
-    available: true
-  }
+
+image: 'assets/images/departments/dermatology.jpg',
+
+icon: 'bi bi-person-hearts',
+
+doctors: 7,
+
+services: [
+  'Skin Consultation',
+  'Hair & Scalp Care',
+  'Skin Assessment',
+  'Personalized Care'
+],
+
+available: true
+
+
+},
+
+{
+id: 7,
+name: 'ENT (Ear, Nose & Throat)',
+description:
+'Specialized medical care for conditions affecting the ears, nose, throat, and related structures.',
+
+
+image: 'assets/images/departments/ent.jpg',
+
+icon: 'bi bi-ear',
+
+doctors: 5,
+
+services: [
+  'Ear Examination',
+  'Nose & Sinus Consultation',
+  'Throat Assessment',
+  'Hearing Health Evaluation'
+],
+
+available: true
+
+
+}
 
 ];

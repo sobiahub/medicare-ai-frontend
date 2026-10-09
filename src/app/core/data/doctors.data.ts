@@ -31,7 +31,7 @@ export const DOCTORS: Doctor[] = [
     specialty: 'Cardiology',
     department: 'Cardiology Department',
     qualification: 'MBBS, FCPS (Cardiology)',
-    image: '/assets/images/doctors/doctor-1.jpg',
+    image: 'assets/images/doctors/doctor-1.jpg',
 
     rating: 4.9,
     reviews: 128,
@@ -58,7 +58,7 @@ export const DOCTORS: Doctor[] = [
     specialty: 'Neurology',
     department: 'Neurology Department',
     qualification: 'MBBS, FCPS (Neurology)',
-    image: '/assets/images/doctors/doctor-2.jpg',
+    image: 'assets/images/doctors/doctor-2.jpg',
 
     rating: 4.8,
     reviews: 96,
@@ -84,7 +84,7 @@ export const DOCTORS: Doctor[] = [
     specialty: 'Dermatology',
     department: 'Dermatology Department',
     qualification: 'MBBS, MCPS, FCPS (Dermatology)',
-    image: '/assets/images/doctors/doctor-3.jpg',
+    image: 'assets/images/doctors/doctor-3.jpg',
 
     rating: 4.9,
     reviews: 143,
@@ -111,7 +111,7 @@ export const DOCTORS: Doctor[] = [
     specialty: 'Pediatrics',
     department: 'Pediatrics Department',
     qualification: 'MBBS, FCPS (Pediatrics)',
-    image: '/assets/images/doctors/doctor-4.jpg',
+    image: 'assets/images/doctors/doctor-4.jpg',
 
     rating: 4.8,
     reviews: 111,
@@ -137,7 +137,7 @@ export const DOCTORS: Doctor[] = [
     specialty: 'Gynecology',
     department: 'Women Healthcare Department',
     qualification: 'MBBS, FCPS (Gynecology)',
-    image: '/assets/images/doctors/doctor-5.jpg',
+    image: 'assets/images/doctors/doctor-5.jpg',
 
     rating: 4.9,
     reviews: 137,
@@ -164,7 +164,7 @@ export const DOCTORS: Doctor[] = [
     specialty: 'Orthopedics',
     department: 'Orthopedic Department',
     qualification: 'MBBS, FCPS (Orthopedics)',
-    image: '/assets/images/doctors/doctor-6.jpg',
+    image: 'assets/images/doctors/doctor-6.jpg',
 
     rating: 4.7,
     reviews: 89,
@@ -190,7 +190,7 @@ export const DOCTORS: Doctor[] = [
     specialty: 'General Medicine',
     department: 'General Medicine Department',
     qualification: 'MBBS, FCPS (Medicine)',
-    image: '/assets/images/doctors/doctor-7.jpg',
+    image: 'assets/images/doctors/doctor-7.jpg',
 
     rating: 4.8,
     reviews: 154,
@@ -217,7 +217,7 @@ export const DOCTORS: Doctor[] = [
     specialty: 'Cardiology',
     department: 'Cardiology Department',
     qualification: 'MBBS, FCPS (Cardiology)',
-    image: '/assets/images/doctors/doctor-8.jpg',
+    image: 'assets/images/doctors/doctor-8.jpg',
 
     rating: 4.9,
     reviews: 102,
