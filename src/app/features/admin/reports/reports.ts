@@ -34,19 +34,13 @@ interface DoctorReport {
 })
 export class Reports {
 
-  // =====================================================
   // FILTERS
-  // =====================================================
-
   selectedPeriod = 'This Month';
 
   selectedReportType = 'All Reports';
 
 
-  // =====================================================
   // OVERVIEW
-  // =====================================================
-
   totalAppointments = 486;
 
   completedAppointments = 392;
@@ -62,10 +56,7 @@ export class Reports {
   activeDoctors = 28;
 
 
-  // =====================================================
   // APPOINTMENT TREND
-  // =====================================================
-
   appointmentTrend = [
     {
       day: 'Mon',
@@ -105,10 +96,7 @@ export class Reports {
   ];
 
 
-  // =====================================================
   // DEPARTMENTS
-  // =====================================================
-
   departmentReports: DepartmentReport[] = [
 
     {
@@ -144,10 +132,7 @@ export class Reports {
   ];
 
 
-  // =====================================================
   // TOP DOCTORS
-  // =====================================================
-
   doctorReports: DoctorReport[] = [
 
     {
@@ -185,10 +170,7 @@ export class Reports {
   ];
 
 
-  // =====================================================
   // REPORTS
-  // =====================================================
-
   reports: ReportItem[] = [
 
     {
@@ -238,10 +220,7 @@ export class Reports {
   ];
 
 
-  // =====================================================
   // COMPUTED VALUES
-  // =====================================================
-
   get completionRate(): number {
 
     if (!this.totalAppointments) {
@@ -290,10 +269,7 @@ export class Reports {
   }
 
 
-  // =====================================================
   // ACTIONS
-  // =====================================================
-
   generateReport(): void {
 
     console.log(
@@ -328,10 +304,7 @@ export class Reports {
   }
 
 
-  // =====================================================
   // BAR HEIGHT
-  // =====================================================
-
   getBarHeight(value: number): string {
 
     if (!this.maxAppointments) {

@@ -49,16 +49,12 @@ export class Profile implements OnInit {
     inject(Router);
 
 
-  // =====================================================
   // USER
-  // =====================================================
 
   currentUser: AuthUser | null = null;
 
 
-  // =====================================================
-  // UI
-  // =====================================================
+
 
   isEditing = false;
 
@@ -69,9 +65,7 @@ export class Profile implements OnInit {
   errorMessage = '';
 
 
-  // =====================================================
-  // PROFILE FORM
-  // =====================================================
+ 
 
   profileForm =
     this.fb.nonNullable.group({
@@ -103,10 +97,7 @@ export class Profile implements OnInit {
     });
 
 
-  // =====================================================
   // INIT
-  // =====================================================
-
   ngOnInit(): void {
 
     this.loadProfile();
@@ -114,10 +105,7 @@ export class Profile implements OnInit {
   }
 
 
-  // =====================================================
   // LOAD PROFILE
-  // =====================================================
-
   loadProfile(): void {
 
     this.currentUser =
@@ -149,10 +137,7 @@ export class Profile implements OnInit {
   }
 
 
-  // =====================================================
   // INITIAL
-  // =====================================================
-
   get userInitial(): string {
 
     return (
@@ -164,10 +149,7 @@ export class Profile implements OnInit {
   }
 
 
-  // =====================================================
   // FULL NAME
-  // =====================================================
-
   get userFullName(): string {
 
     if (!this.currentUser) {
@@ -182,10 +164,7 @@ export class Profile implements OnInit {
   }
 
 
-  // =====================================================
   // START EDIT
-  // =====================================================
-
   startEditing(): void {
 
     this.successMessage = '';
@@ -197,10 +176,7 @@ export class Profile implements OnInit {
   }
 
 
-  // =====================================================
   // CANCEL EDIT
-  // =====================================================
-
   cancelEditing(): void {
 
     if (!this.currentUser) {
@@ -233,10 +209,7 @@ export class Profile implements OnInit {
   }
 
 
-  // =====================================================
   // SAVE PROFILE
-  // =====================================================
-
   saveProfile(): void {
 
     this.successMessage = '';
@@ -244,9 +217,7 @@ export class Profile implements OnInit {
     this.errorMessage = '';
 
 
-    // ---------------------------------------------------
-    // VALIDATION
-    // ---------------------------------------------------
+
 
     if (this.profileForm.invalid) {
 
@@ -257,16 +228,11 @@ export class Profile implements OnInit {
     }
 
 
-    // ---------------------------------------------------
-    // SAVING STATE
-    // ---------------------------------------------------
-
+  
     this.isSaving = true;
 
 
-    // ---------------------------------------------------
-    // UPDATE PROFILE
-    // ---------------------------------------------------
+   
 
     this.authService
       .updateProfile(
@@ -274,9 +240,7 @@ export class Profile implements OnInit {
       )
       .subscribe({
 
-        // -------------------------------------------------
-        // SUCCESS
-        // -------------------------------------------------
+
 
         next: (updatedUser: AuthUser) => {
 
@@ -295,9 +259,6 @@ export class Profile implements OnInit {
         },
 
 
-        // -------------------------------------------------
-        // ERROR
-        // -------------------------------------------------
 
         error: (error: unknown) => {
 
@@ -329,9 +290,7 @@ export class Profile implements OnInit {
   }
 
 
-  // =====================================================
-  // LOGOUT
-  // =====================================================
+  
 
   logout(): void {
 

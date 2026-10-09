@@ -30,9 +30,7 @@ import { AuthService } from '../../../core/services/auth';
 })
 export class ResetPassword implements OnInit {
 
-  // =====================================================
-  // DEPENDENCIES
-  // =====================================================
+  
 
   private readonly fb = inject(FormBuilder);
 
@@ -43,25 +41,18 @@ export class ResetPassword implements OnInit {
   private readonly authService = inject(AuthService);
 
 
-  // =====================================================
-  // FORM
-  // =====================================================
+
 
   resetForm: FormGroup;
 
 
-  // =====================================================
-  // ROUTE DATA
-  // =====================================================
 
   email = '';
 
   resetToken = '';
 
 
-  // =====================================================
-  // UI STATE
-  // =====================================================
+ 
 
   isSubmitting = false;
 
@@ -70,18 +61,12 @@ export class ResetPassword implements OnInit {
   successMessage = '';
 
 
-  // =====================================================
-  // PASSWORD VISIBILITY
-  // =====================================================
 
   showPassword = false;
 
   showConfirmPassword = false;
 
 
-  // =====================================================
-  // CONSTRUCTOR
-  // =====================================================
 
   constructor() {
 
@@ -115,9 +100,6 @@ export class ResetPassword implements OnInit {
   }
 
 
-  // =====================================================
-  // INIT
-  // =====================================================
 
   ngOnInit(): void {
 
@@ -151,9 +133,6 @@ export class ResetPassword implements OnInit {
   }
 
 
-  // =====================================================
-  // FORM GETTERS
-  // =====================================================
 
   get password(): AbstractControl | null {
 
@@ -169,9 +148,7 @@ export class ResetPassword implements OnInit {
   }
 
 
-  // =====================================================
-  // PASSWORD MATCH VALIDATOR
-  // =====================================================
+  
 
   private passwordMatchValidator(
     control: AbstractControl
@@ -203,9 +180,6 @@ export class ResetPassword implements OnInit {
   }
 
 
-  // =====================================================
-  // PASSWORD REQUIREMENTS
-  // =====================================================
 
   hasMinLength(): boolean {
 
@@ -265,9 +239,7 @@ export class ResetPassword implements OnInit {
   }
 
 
-  // =====================================================
-  // PASSWORD INVALID
-  // =====================================================
+ 
 
   isPasswordInvalid(): boolean {
 
@@ -280,9 +252,7 @@ export class ResetPassword implements OnInit {
   }
 
 
-  // =====================================================
-  // CONFIRM PASSWORD INVALID
-  // =====================================================
+ 
 
   isConfirmPasswordInvalid(): boolean {
 
@@ -298,9 +268,6 @@ export class ResetPassword implements OnInit {
   }
 
 
-  // =====================================================
-  // TOGGLE PASSWORD
-  // =====================================================
 
   togglePassword(): void {
 
@@ -310,9 +277,6 @@ export class ResetPassword implements OnInit {
   }
 
 
-  // =====================================================
-  // TOGGLE CONFIRM PASSWORD
-  // =====================================================
 
   toggleConfirmPassword(): void {
 
@@ -322,9 +286,6 @@ export class ResetPassword implements OnInit {
   }
 
 
-  // =====================================================
-  // RESET PASSWORD
-  // =====================================================
 
   resetPassword(): void {
 
@@ -333,9 +294,7 @@ export class ResetPassword implements OnInit {
     this.successMessage = '';
 
 
-    // -----------------------------------------------
-    // VALIDATE ROUTE DATA
-    // -----------------------------------------------
+ 
 
     if (
       !this.email ||
@@ -350,9 +309,7 @@ export class ResetPassword implements OnInit {
     }
 
 
-    // -----------------------------------------------
-    // VALIDATE FORM
-    // -----------------------------------------------
+   
 
     if (this.resetForm.invalid) {
 
@@ -363,10 +320,7 @@ export class ResetPassword implements OnInit {
     }
 
 
-    // -----------------------------------------------
-    // PREVENT DOUBLE SUBMIT
-    // -----------------------------------------------
-
+   
     if (this.isSubmitting) {
       return;
     }
@@ -379,9 +333,6 @@ export class ResetPassword implements OnInit {
       this.password?.value;
 
 
-    // -----------------------------------------------
-    // AUTH SERVICE
-    // -----------------------------------------------
 
     this.authService
       .resetPassword({
@@ -397,9 +348,7 @@ export class ResetPassword implements OnInit {
       })
       .subscribe({
 
-        // -------------------------------------------
-        // SUCCESS
-        // -------------------------------------------
+       
 
         next: (response) => {
 
@@ -432,9 +381,7 @@ export class ResetPassword implements OnInit {
         },
 
 
-        // -------------------------------------------
-        // ERROR
-        // -------------------------------------------
+       
 
         error: (error) => {
 
@@ -452,9 +399,7 @@ export class ResetPassword implements OnInit {
   }
 
 
-  // =====================================================
-  // GO BACK
-  // =====================================================
+  
 
   goBack(): void {
 

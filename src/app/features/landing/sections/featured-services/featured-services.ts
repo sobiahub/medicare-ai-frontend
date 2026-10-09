@@ -29,9 +29,7 @@ import {
 })
 export class FeaturedServices {
 
-  // ============================================================
-  // ALL DATA
-  // ============================================================
+
 
   services: HealthcareService[] = SERVICES;
 
@@ -40,10 +38,7 @@ export class FeaturedServices {
   departments: Department[] = DEPARTMENTS;
 
 
-  // ============================================================
   // FEATURED DATA
-  // ============================================================
-
   featuredServices: HealthcareService[] =
     SERVICES.slice(0, 4);
 

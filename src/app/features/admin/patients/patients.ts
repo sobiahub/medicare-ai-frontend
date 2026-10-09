@@ -113,10 +113,7 @@ export class Patients {
   ];
 
 
-  // =====================================================
   // FILTERED PATIENTS
-  // =====================================================
-
   get filteredPatients(): Patient[] {
 
     const search = this.searchTerm
@@ -154,10 +151,7 @@ export class Patients {
   }
 
 
-  // =====================================================
   // COUNTS
-  // =====================================================
-
   get activePatients(): number {
 
     return this.patients.filter(
@@ -187,10 +181,7 @@ export class Patients {
   }
 
 
-  // =====================================================
   // FILTER ACTIONS
-  // =====================================================
-
   clearFilters(): void {
 
     this.searchTerm = '';
@@ -202,10 +193,7 @@ export class Patients {
   }
 
 
-  // =====================================================
   // ACTIONS
-  // =====================================================
-
   addPatient(): void {
 
     console.log('Add patient');

@@ -89,21 +89,21 @@ export class AdminSidebar {
     },
 
     
-    {
-      title: 'Account',
-      items: [
-        {
-          label: 'Profile',
-          route: '/admin/profile',
-          icon: 'bi-person-circle',
-        },
-        {
-        label: 'Settings',
-        route: '/admin/settings',
-        icon: 'bi-gear',
-      },
-      ],
-    },
+    // {
+    //   title: 'Account',
+    //   items: [
+    //     {
+    //       label: 'Profile',
+    //       route: '/admin/profile',
+    //       icon: 'bi-person-circle',
+    //     },
+    //     {
+    //     label: 'Settings',
+    //     route: '/admin/settings',
+    //     icon: 'bi-gear',
+    //   },
+    //   ],
+    // },
 
     {
       title: 'Analytics',

@@ -48,10 +48,7 @@ export class AppointmentService {
   private readonly APPOINTMENTS_KEY = 'dhm_appointments';
 
 
-  // =====================================================
-  // TEMPORARY DOCTORS
-  // Later this can come from Django API
-  // =====================================================
+ 
 
   private readonly doctors: Doctor[] = [
 
@@ -103,9 +100,7 @@ export class AppointmentService {
   ];
 
 
-  // =====================================================
-  // GET DOCTORS
-  // =====================================================
+
 
   getDoctors(): Observable<Doctor[]> {
 
@@ -120,9 +115,7 @@ export class AppointmentService {
   }
 
 
-  // =====================================================
-  // GET SINGLE DOCTOR
-  // =====================================================
+  
 
   getDoctorById(
     doctorId: number
@@ -135,9 +128,7 @@ export class AppointmentService {
   }
 
 
-  // =====================================================
-  // GET ALL APPOINTMENTS
-  // =====================================================
+
 
   getAppointments(): Observable<Appointment[]> {
 
@@ -155,9 +146,7 @@ export class AppointmentService {
   }
 
 
-  // =====================================================
-  // CREATE APPOINTMENT
-  // =====================================================
+ 
 
   createAppointment(
     data: CreateAppointmentRequest
@@ -256,9 +245,6 @@ export class AppointmentService {
   }
 
 
-  // =====================================================
-  // CANCEL APPOINTMENT
-  // =====================================================
 
   cancelAppointment(
     appointmentId: string
@@ -337,9 +323,7 @@ export class AppointmentService {
   }
 
 
-  // =====================================================
-  // GET UPCOMING APPOINTMENTS
-  // =====================================================
+ 
 
   getUpcomingAppointments():
     Observable<Appointment[]> {
@@ -379,9 +363,7 @@ export class AppointmentService {
   }
 
 
-  // =====================================================
-  // GET PAST APPOINTMENTS
-  // =====================================================
+ 
 
   getPastAppointments():
     Observable<Appointment[]> {
@@ -423,9 +405,6 @@ export class AppointmentService {
   }
 
 
-  // =====================================================
-  // GET TODAY
-  // =====================================================
 
   getToday(): string {
 
@@ -450,9 +429,7 @@ export class AppointmentService {
   }
 
 
-  // =====================================================
-  // FORMAT DATE
-  // =====================================================
+  
 
   formatDate(
     date: string
@@ -477,9 +454,7 @@ export class AppointmentService {
   }
 
 
-  // =====================================================
-  // PRIVATE STORAGE METHODS
-  // =====================================================
+ 
 
   private getStoredAppointments():
     Appointment[] {

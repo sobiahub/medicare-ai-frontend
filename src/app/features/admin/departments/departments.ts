@@ -26,10 +26,7 @@ export class Departments {
   selectedStatus = 'All Status';
 
 
-  // =====================================================
   // DEPARTMENTS
-  // =====================================================
-
   departments: Department[] = [
 
     {
@@ -131,10 +128,7 @@ export class Departments {
   ];
 
 
-  // =====================================================
   // FILTERED DEPARTMENTS
-  // =====================================================
-
   get filteredDepartments(): Department[] {
 
     const search = this.searchTerm
@@ -161,10 +155,7 @@ export class Departments {
   }
 
 
-  // =====================================================
   // SUMMARY
-  // =====================================================
-
   get activeDepartments(): number {
 
     return this.departments.filter(
@@ -213,10 +204,7 @@ export class Departments {
   }
 
 
-  // =====================================================
   // FILTER ACTIONS
-  // =====================================================
-
   clearFilters(): void {
 
     this.searchTerm = '';
@@ -226,10 +214,7 @@ export class Departments {
   }
 
 
-  // =====================================================
   // ACTIONS
-  // =====================================================
-
   addDepartment(): void {
 
     console.log('Add department');

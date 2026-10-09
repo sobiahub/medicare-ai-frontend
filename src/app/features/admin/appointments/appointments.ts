@@ -32,10 +32,7 @@ export class Appointments {
   selectedDate = 'All Dates';
 
 
-  // =====================================================
   // APPOINTMENTS
-  // =====================================================
-
   appointments: Appointment[] = [
 
     {
@@ -132,10 +129,7 @@ export class Appointments {
   ];
 
 
-  // =====================================================
   // FILTERED APPOINTMENTS
-  // =====================================================
-
   get filteredAppointments(): Appointment[] {
 
     const search = this.searchTerm
@@ -184,10 +178,7 @@ export class Appointments {
   }
 
 
-  // =====================================================
   // SUMMARY COUNTS
-  // =====================================================
-
   get confirmedAppointments(): number {
 
     return this.appointments.filter(
@@ -236,10 +227,7 @@ export class Appointments {
   }
 
 
-  // =====================================================
   // FILTER ACTIONS
-  // =====================================================
-
   clearFilters(): void {
 
     this.searchTerm = '';
@@ -253,10 +241,7 @@ export class Appointments {
   }
 
 
-  // =====================================================
   // ACTIONS
-  // =====================================================
-
   addAppointment(): void {
 
     console.log('Add appointment');

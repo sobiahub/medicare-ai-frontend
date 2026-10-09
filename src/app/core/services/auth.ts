@@ -20,9 +20,6 @@ import {
 } from 'rxjs/operators';
 
 
-// =======================================================
-// REGISTER
-// =======================================================
 
 export interface RegisterRequest {
   firstName: string;
@@ -33,9 +30,7 @@ export interface RegisterRequest {
 }
 
 
-// =======================================================
-// LOGIN
-// =======================================================
+
 
 export interface LoginRequest {
   email: string;
@@ -43,9 +38,7 @@ export interface LoginRequest {
 }
 
 
-// =======================================================
-// USER
-// =======================================================
+
 
 export interface AuthUser {
   id: string;
@@ -63,27 +56,21 @@ export interface UpdateProfileRequest {
   phone: string;
 }
 
-// =======================================================
-// STORED USER
-// =======================================================
+
 
 interface StoredUser extends AuthUser {
   password: string;
 }
 
 
-// =======================================================
-// FORGOT PASSWORD
-// =======================================================
+
 
 export interface ForgotPasswordRequest {
   email: string;
 }
 
 
-// =======================================================
-// VERIFY CODE
-// =======================================================
+
 
 export interface VerifyCodeRequest {
   email: string;
@@ -91,9 +78,7 @@ export interface VerifyCodeRequest {
 }
 
 
-// =======================================================
-// RESET PASSWORD
-// =======================================================
+
 
 export interface ResetPasswordRequest {
   email: string;
@@ -102,9 +87,7 @@ export interface ResetPasswordRequest {
 }
 
 
-// =======================================================
-// RESET SESSION
-// =======================================================
+
 
 interface ResetSession {
   email: string;
@@ -124,9 +107,7 @@ export class AuthService {
     inject(PLATFORM_ID);
 
 
-  // =====================================================
-  // LOCAL STORAGE KEYS
-  // =====================================================
+ 
 
   private readonly USERS_KEY =
     'dhm_users';
@@ -138,9 +119,7 @@ export class AuthService {
     'dhm_password_reset';
 
 
-  // =====================================================
-  // REACTIVE AUTH STATE
-  // =====================================================
+ 
 
   private readonly currentUserSubject =
     new BehaviorSubject<AuthUser | null>(
@@ -152,9 +131,7 @@ export class AuthService {
     this.currentUserSubject.asObservable();
 
 
-  // =====================================================
-  // CURRENT USER
-  // =====================================================
+ 
 
   getCurrentUser(): AuthUser | null {
 
@@ -163,9 +140,6 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // IS LOGGED IN
-  // =====================================================
 
   isLoggedIn(): boolean {
 
@@ -174,9 +148,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // REGISTER
-  // =====================================================
+  
 
   register(
     data: RegisterRequest
@@ -198,9 +170,7 @@ export class AuthService {
       this.getUsers();
 
 
-    // -----------------------------------------------
-    // CHECK EXISTING EMAIL
-    // -----------------------------------------------
+    
 
     const existingUser =
       users.find(
@@ -222,9 +192,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // CREATE USER
-    // -----------------------------------------------
+    
 
     const newUser: AuthUser = {
 
@@ -274,10 +242,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // LOGIN
-  // =====================================================
-
+  
   login(
     data: LoginRequest
   ): Observable<AuthUser> {
@@ -324,9 +289,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // AUTH USER
-    // -----------------------------------------------
+ 
 
     const authUser: AuthUser = {
 
@@ -351,9 +314,7 @@ export class AuthService {
     };
 
 
-    // -----------------------------------------------
-    // SAVE CURRENT USER
-    // -----------------------------------------------
+   
 
     localStorage.setItem(
       this.CURRENT_USER_KEY,
@@ -361,9 +322,7 @@ export class AuthService {
     );
 
 
-    // -----------------------------------------------
-    // UPDATE REACTIVE STATE
-    // -----------------------------------------------
+
 
     this.currentUserSubject.next(
       authUser
@@ -377,9 +336,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // LOGOUT
-  // =====================================================
+ 
 
   logout(): void {
 
@@ -393,9 +350,7 @@ export class AuthService {
     );
 
 
-    // -----------------------------------------------
-    // UPDATE NAVBAR / APP STATE
-    // -----------------------------------------------
+ 
 
     this.currentUserSubject.next(
       null
@@ -404,9 +359,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // CHECK EMAIL
-  // =====================================================
+  
 
   isEmailRegistered(
     email: string
@@ -426,9 +379,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // FORGOT PASSWORD
-  // =====================================================
+ 
 
   forgotPassword(
     data: ForgotPasswordRequest
@@ -474,25 +425,19 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // TEMPORARY FRONTEND CODE
-    // -----------------------------------------------
+    
 
     const code =
       '123456';
 
 
-    // -----------------------------------------------
-    // RESET TOKEN
-    // -----------------------------------------------
+    
 
     const resetToken =
       crypto.randomUUID();
 
 
-    // -----------------------------------------------
-    // EXPIRATION
-    // -----------------------------------------------
+  
 
     const expiresAt =
       Date.now() +
@@ -532,9 +477,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // VERIFY RESET CODE
-  // =====================================================
+  
 
   verifyResetCode(
     data: VerifyCodeRequest
@@ -570,9 +513,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // EMAIL CHECK
-    // -----------------------------------------------
+  
 
     if (
       session.email !==
@@ -589,9 +530,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // EXPIRATION
-    // -----------------------------------------------
+   
 
     if (
       Date.now() >
@@ -610,9 +549,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // CODE CHECK
-    // -----------------------------------------------
+  
 
     if (
       session.code !==
@@ -629,9 +566,6 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // VERIFIED
-    // -----------------------------------------------
 
     session.verified =
       true;
@@ -655,9 +589,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // RESET PASSWORD
-  // =====================================================
+  
 
   resetPassword(
     data: ResetPasswordRequest
@@ -691,9 +623,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // EXPIRATION
-    // -----------------------------------------------
+    
 
     if (
       Date.now() >
@@ -712,9 +642,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // EMAIL
-    // -----------------------------------------------
+    
 
     if (
       session.email !==
@@ -731,9 +659,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // TOKEN
-    // -----------------------------------------------
+    
 
     if (
       session.resetToken !==
@@ -750,9 +676,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // VERIFIED
-    // -----------------------------------------------
+  
 
     if (!session.verified) {
 
@@ -766,9 +690,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // USERS
-    // -----------------------------------------------
+  
 
     const users =
       this.getUsers();
@@ -794,9 +716,7 @@ export class AuthService {
     }
 
 
-    // -----------------------------------------------
-    // UPDATE PASSWORD
-    // -----------------------------------------------
+    
 
     users[userIndex].password =
       data.password;
@@ -808,10 +728,7 @@ export class AuthService {
     );
 
 
-    // -----------------------------------------------
-    // CLEAR RESET
-    // -----------------------------------------------
-
+   
     this.clearPasswordResetSession();
 
 
@@ -827,9 +744,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // RESEND CODE
-  // =====================================================
+
 
   resendResetCode(
     email: string
@@ -842,9 +757,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // GET RESET SESSION
-  // =====================================================
+ 
 
   getPasswordResetSession():
     ResetSession | null {
@@ -854,9 +767,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // CLEAR RESET SESSION
-  // =====================================================
+
 
   clearPasswordResetSession(): void {
 
@@ -872,9 +783,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // PRIVATE: LOAD CURRENT USER
-  // =====================================================
+  
 
   private loadCurrentUser():
     AuthUser | null {
@@ -914,9 +823,7 @@ export class AuthService {
   }
 
 
-  // =====================================================
-  // PRIVATE: GET USERS
-  // =====================================================
+  
 
   private getUsers():
     StoredUser[] {
@@ -959,9 +866,7 @@ export class AuthService {
   }
 
 
-   // =====================================================
-// UPDATE PROFILE
-// =====================================================
+  
 
 
 
@@ -1069,9 +974,7 @@ updateProfile(
 }
 
 
-  // =====================================================
-  // PRIVATE: GET RESET SESSION
-  // =====================================================
+  
 
   private getResetSession():
     ResetSession | null {

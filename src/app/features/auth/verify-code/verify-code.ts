@@ -26,9 +26,7 @@ import { AuthService } from '../../../core/services/auth';
 })
 export class VerifyCode implements OnInit {
 
-  // =====================================================
-  // DEPENDENCIES
-  // =====================================================
+  
 
   private readonly fb = inject(FormBuilder);
 
@@ -39,16 +37,12 @@ export class VerifyCode implements OnInit {
   private readonly authService = inject(AuthService);
 
 
-  // =====================================================
-  // FORM
-  // =====================================================
+ 
 
   verifyForm: FormGroup;
 
 
-  // =====================================================
-  // STATE
-  // =====================================================
+ 
 
   email = '';
 
@@ -61,9 +55,6 @@ export class VerifyCode implements OnInit {
   successMessage = '';
 
 
-  // =====================================================
-  // CONSTRUCTOR
-  // =====================================================
 
   constructor() {
 
@@ -82,9 +73,7 @@ export class VerifyCode implements OnInit {
   }
 
 
-  // =====================================================
-  // INIT
-  // =====================================================
+  
 
   ngOnInit(): void {
 
@@ -114,9 +103,7 @@ export class VerifyCode implements OnInit {
   }
 
 
-  // =====================================================
-  // GETTERS
-  // =====================================================
+  
 
   get code() {
 
@@ -125,9 +112,7 @@ export class VerifyCode implements OnInit {
   }
 
 
-  // =====================================================
-  // CODE INVALID
-  // =====================================================
+
 
   isCodeInvalid(): boolean {
 
@@ -140,9 +125,7 @@ export class VerifyCode implements OnInit {
   }
 
 
-  // =====================================================
-  // VERIFY CODE
-  // =====================================================
+
 
   verifyCode(): void {
 
@@ -151,9 +134,7 @@ export class VerifyCode implements OnInit {
     this.successMessage = '';
 
 
-    // -----------------------------------------------
-    // FORM VALIDATION
-    // -----------------------------------------------
+   
 
     if (this.verifyForm.invalid) {
 
@@ -164,9 +145,7 @@ export class VerifyCode implements OnInit {
     }
 
 
-    // -----------------------------------------------
-    // PREVENT DOUBLE SUBMIT
-    // -----------------------------------------------
+
 
     if (this.isSubmitting) {
       return;
@@ -199,9 +178,7 @@ export class VerifyCode implements OnInit {
       })
       .subscribe({
 
-        // -------------------------------------------
-        // SUCCESS
-        // -------------------------------------------
+    
 
         next: (response) => {
 
@@ -228,9 +205,7 @@ export class VerifyCode implements OnInit {
         },
 
 
-        // -------------------------------------------
-        // ERROR
-        // -------------------------------------------
+      
 
         error: (error) => {
 
@@ -248,9 +223,7 @@ export class VerifyCode implements OnInit {
   }
 
 
-  // =====================================================
-  // RESEND CODE
-  // =====================================================
+  
 
   resendCode(): void {
 
@@ -282,9 +255,7 @@ export class VerifyCode implements OnInit {
       .resendResetCode(this.email)
       .subscribe({
 
-        // -------------------------------------------
-        // SUCCESS
-        // -------------------------------------------
+       
 
         next: (response) => {
 
@@ -306,9 +277,7 @@ export class VerifyCode implements OnInit {
         },
 
 
-        // -------------------------------------------
-        // ERROR
-        // -------------------------------------------
+      
 
         error: (error) => {
 
@@ -326,9 +295,7 @@ export class VerifyCode implements OnInit {
   }
 
 
-  // =====================================================
-  // BACK
-  // =====================================================
+  
 
   goBack(): void {
 
@@ -344,9 +311,7 @@ export class VerifyCode implements OnInit {
   }
 
 
-  // =====================================================
-  // ONLY ALLOW NUMBERS
-  // =====================================================
+ 
 
   onCodeInput(event: Event): void {
 

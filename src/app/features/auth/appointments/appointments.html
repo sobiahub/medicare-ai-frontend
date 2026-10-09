@@ -2,10 +2,7 @@
 
 <div class="min-h-screen bg-[#F8FAFC] pt-20">
 
-  <!-- ================================================= -->
   <!-- HERO -->
-  <!-- ================================================= -->
-
   <section class="border-b border-slate-200 bg-white">
 
     <div
@@ -78,19 +75,13 @@
   </section>
 
 
-  <!-- ================================================= -->
   <!-- CONTENT -->
-  <!-- ================================================= -->
-
   <main
     class="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:px-10 lg:py-10"
   >
 
 
-    <!-- ================================================= -->
     <!-- SUCCESS -->
-    <!-- ================================================= -->
-
     <div
       *ngIf="successMessage"
       class="mb-6 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3"
@@ -113,10 +104,7 @@
     </div>
 
 
-    <!-- ================================================= -->
     <!-- ERROR -->
-    <!-- ================================================= -->
-
     <div
       *ngIf="errorMessage && !showBookingForm"
       class="mb-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3"
@@ -139,10 +127,7 @@
     </div>
 
 
-    <!-- ================================================= -->
     <!-- GUEST USER -->
-    <!-- ================================================= -->
-
     <section
       *ngIf="!isLoggedIn"
       class="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white"
@@ -251,10 +236,7 @@
     </section>
 
 
-    <!-- ================================================= -->
     <!-- LOGGED-IN SUMMARY -->
-    <!-- ================================================= -->
-
     <section
       *ngIf="isLoggedIn"
       class="mb-8"
@@ -343,10 +325,7 @@
     </section>
 
 
-    <!-- ================================================= -->
     <!-- APPOINTMENTS -->
-    <!-- ================================================= -->
-
     <section>
 
       <!-- SECTION HEADER -->
@@ -436,10 +415,7 @@
       </div>
 
 
-      <!-- ================================================= -->
       <!-- APPOINTMENT LIST -->
-      <!-- ================================================= -->
-
       <div
         *ngIf="displayedAppointments.length > 0"
         class="space-y-3"
@@ -587,10 +563,7 @@
       </div>
 
 
-      <!-- ================================================= -->
       <!-- EMPTY STATE -->
-      <!-- ================================================= -->
-
       <div
         *ngIf="displayedAppointments.length === 0"
         class="rounded-2xl border border-dashed border-slate-200 bg-white px-5 py-14 text-center"
@@ -645,10 +618,7 @@
     </section>
 
 
-    <!-- ================================================= -->
     <!-- BOOKING FORM -->
-    <!-- ================================================= -->
-
     <section
       *ngIf="showBookingForm"
       id="booking-form"

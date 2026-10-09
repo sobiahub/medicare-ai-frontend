@@ -27,10 +27,7 @@ export class Users {
   selectedStatus = 'All Status';
 
 
-  // =====================================================
   // USERS
-  // =====================================================
-
   users: User[] = [
 
     {
@@ -136,10 +133,7 @@ export class Users {
   ];
 
 
-  // =====================================================
   // FILTERED USERS
-  // =====================================================
-
   get filteredUsers(): User[] {
 
     const search = this.searchTerm
@@ -175,10 +169,7 @@ export class Users {
   }
 
 
-  // =====================================================
   // SUMMARY
-  // =====================================================
-
   get activeUsers(): number {
 
     return this.users.filter(
@@ -253,10 +244,7 @@ export class Users {
   }
 
 
-  // =====================================================
   // FILTER ACTIONS
-  // =====================================================
-
   clearFilters(): void {
 
     this.searchTerm = '';
@@ -268,10 +256,7 @@ export class Users {
   }
 
 
-  // =====================================================
   // USER ACTIONS
-  // =====================================================
-
   addUser(): void {
 
     console.log('Add user');
@@ -325,10 +310,7 @@ export class Users {
   }
 
 
-  // =====================================================
   // ROLE STYLING
-  // =====================================================
-
   getRoleClasses(role: User['role']): string {
 
     switch (role) {

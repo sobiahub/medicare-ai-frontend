@@ -35,10 +35,7 @@ export class Appointments implements OnInit {
     inject(AppointmentService);
 
 
-  // =====================================================
   // DATA
-  // =====================================================
-
   appointments: Appointment[] = [];
 
   doctors: Doctor[] = [];
@@ -58,10 +55,7 @@ export class Appointments implements OnInit {
   activeTab: 'upcoming' | 'past' = 'upcoming';
 
 
-  // =====================================================
   // FORM
-  // =====================================================
-
   bookingForm: FormGroup = this.fb.group({
 
     firstName: [
@@ -125,10 +119,7 @@ export class Appointments implements OnInit {
   });
 
 
-  // =====================================================
   // INIT
-  // =====================================================
-
   ngOnInit(): void {
 
     this.loadCurrentUser();
@@ -142,10 +133,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // CURRENT USER
-  // =====================================================
-
   private loadCurrentUser(): void {
 
     if (typeof window === 'undefined') {
@@ -183,10 +171,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // PREFILL LOGGED-IN USER
-  // =====================================================
-
   private prefillUser(): void {
 
     if (!this.currentUser) {
@@ -212,10 +197,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // DOCTORS
-  // =====================================================
-
   private loadDoctors(): void {
 
     this.appointmentService
@@ -241,10 +223,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // APPOINTMENTS
-  // =====================================================
-
   private loadAppointments(): void {
 
     this.appointmentService
@@ -271,10 +250,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // GETTERS
-  // =====================================================
-
   get upcomingAppointments(): Appointment[] {
 
     return this.appointments.filter(
@@ -320,10 +296,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // BOOK APPOINTMENT
-  // =====================================================
-
   bookAppointment(): void {
 
     this.errorMessage = '';
@@ -399,10 +372,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // CANCEL APPOINTMENT
-  // =====================================================
-
   cancelAppointment(
     appointment: Appointment
   ): void {
@@ -461,10 +431,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // BOOKING FORM
-  // =====================================================
-
   openBookingForm(): void {
 
     this.errorMessage = '';
@@ -501,10 +468,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // TABS
-  // =====================================================
-
   setTab(
     tab: 'upcoming' | 'past'
   ): void {
@@ -514,10 +478,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // HELPERS
-  // =====================================================
-
   getToday(): string {
 
     return this.appointmentService
@@ -552,10 +513,7 @@ export class Appointments implements OnInit {
   }
 
 
-  // =====================================================
   // AUTH NAVIGATION
-  // =====================================================
-
   goToLogin(): void {
 
     this.router.navigate(
